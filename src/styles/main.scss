@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
+
+$green: #27300f;
+$orange: #d26a22;
+$white: #fff;
+
+$font-jost: 'Jost', sans-serif;
+$font-cormorant: 'Cormorant', serif;
+
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    font-family: $font-jost;
+    color: $green;
+}
+.header {
+    max-width: 1440px;
+    margin: 0 auto 6rem;    
+    padding: 4rem 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &__nav {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+        gap: 4.8rem;
+    }
+    &__link {
+        text-decoration: none;
+        color: $green;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__tel {
+        text-decoration: none;           
+        color: $green;
+        font-weight: 500;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__cart {
+        display: block;
+        width: 3.8rem;
+        height: 3.8rem;
+        border-radius: 100%;
+        background-color: $orange;
+        background-image: url(../images/cart.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 1.7rem 1.5rem;
+        position: relative;
+        border: 1px solid $orange;
+        &:hover {
+            background-color: #27300f;
+            border: 1px solid $green;
+        }
+    }
+    &__counter {
+        color: $white;
+        font-size: .8rem;
+        position: absolute;
+        right: 1rem;
+        top: .6rem;
+    }
+}
+.logo {
+    display: block;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 12.3rem;
+    height: 3.2rem;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main {
+    background-image: url(../images/main.png);
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+    padding-bottom: 187px;
+    &__item {
+        margin-left: 12rem;
+        max-width: 378px;
+        margin-top: 6rem;
+    }
+    &__link {
+        margin-top: 6rem;
+    }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    &__cover {
+        flex-basis: 763px;
+        height: 763px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__line {
+        width: 658px;
+        height: 658px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image {
+        width: 92%;
+    }
+    &__btn {
+        background-color: transparent;
+        border: none;        
+        padding: 0;        
+        position: absolute;
+        color: $green;
+        text-align: left;
+         &:hover {
+             .main__btn {
+                 &::before {
+                      background-color: $orange;
+                      border: 0 0 0 4px $orange, 0 0 0 5px $orange;
+                 }
+            }
+        }        
+        &::before {
+            content: "";
+            background-color: $green;
+            width: 11px;
+            height: 11px;
+            box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+            border-radius: 100%;
+            position: absolute;
+        }    
+        &_1 {
+            top: 61px;
+            left: 63px;
+            &::before {
+                bottom: 9px;
+                right: -23px;
+            }
+        }
+        &_2 {
+            top: 197px;
+            right: 8px;
+            &::before {
+                top: 12px;
+                right: 84px;
+            }
+        }
+        &_3 {
+            bottom: -40px;
+            right: 244px;
+            &::before {
+                bottom: 48px;
+                right: 35px;
+            }
+        }
+    }
+    &__food {
+        display: block;
+        color: rgba($green, 0.8);
+    }
+    &__tomato {
+        position: absolute;
+        top: 856px;
+        right: 110px;
+        width: 11rem;
+        }    
+    &__avocado {
+        position: absolute;
+        top: 60px;
+        right: 24px;
+        width: 14rem;
+        }
+    &__pepper {
+        left: 29px;
+        position: absolute;
+        top: 412px;
+        width: 9rem;
+        }
+    &__cucumber {
+        left: 2680px;
+        position: absolute;
+        top: 0px;
+        width: 9rem;
+        } 
+    &__beans {
+        left: 0px;
+        position: absolute;
+        bottom: 181px;
+        width: 10rem;
+        } 
+    }
+
+.title {
+    font-family: $font-cormorant;
+    font-weight: 700;
+    font-size: 8rem;
+    margin: 0;  
+    &__span {
+        font-style: italic;
+    }
+    &_block {
+        .title__span {
+            display: block;
+        }
+    }
+}
+.description {
+    margin: 0;
+    &_size-s {
+        font-size: 1.8rem;
+    }
+}
+.link {
+    color: $white;
+    text-transform: uppercase;
+    padding: 2.5rem 4.2rem;
+    background-color: $orange;
+    box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+    text-decoration: none;
+    border-radius: 3.8rem;
+    display: inline-block;    
+}
