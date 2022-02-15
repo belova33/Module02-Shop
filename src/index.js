@@ -7,8 +7,6 @@ import "./index.html";
 
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-
-
 var swiper = new Swiper(".offerSwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
