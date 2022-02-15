@@ -1,12 +1,13 @@
 import "normalize.css"
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import "./styles/main.scss";
 import "./index.html";
 
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
 
 var swiper = new Swiper(".offerSwiper", {
     slidesPerView: 3,

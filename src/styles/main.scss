@@ -266,6 +266,27 @@ body {
     &__text {
         margin-top: 6rem;
         max-width: 700px;
-
+    }
+    &__slider {
+        overflow: hidden;
+        padding-top: 100px;
+    }
+}
+.swiper {
+    overflow: initial;
+    &-slide {
+        border: 1px solid $green;
+    }
+    &-pagination {
+        display: none;
+    }
+    &-button-next, &-button-prev {
+        top: -60px;
+        &::after {
+            color: $green;
+        }   
+    }
+    &-button-prev {
+        left: initial;
     }
 }
