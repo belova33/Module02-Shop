@@ -88,8 +88,10 @@ body {
     background-image: url(../images/main.png);
     background-size: cover;
     background-position-x: center;
+    background-repeat: no-repeat;
     position: relative;
     padding-bottom: 187px;
+    z-index: 0;
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -186,30 +188,35 @@ body {
         top: 856px;
         right: 110px;
         width: 11rem;
+        z-index: -1;
         }    
     &__avocado {
         position: absolute;
         top: 60px;
         right: 24px;
         width: 14rem;
+        z-index: -1;
         }
     &__pepper {
         left: 29px;
         position: absolute;
         top: 412px;
         width: 9rem;
+        z-index: -1;
         }
     &__cucumber {
         left: 2680px;
         position: absolute;
         top: 0px;
         width: 9rem;
+        z-index: -1;
         } 
     &__beans {
         left: 0px;
         position: absolute;
         bottom: 181px;
         width: 10rem;
+        z-index: -1;
         } 
     }
 
@@ -233,6 +240,9 @@ body {
     &_size-s {
         font-size: 1.8rem;
     }
+    &_size-m {
+        font-size: 2.4rem;
+    }
 }
 .link {
     color: $white;
@@ -244,4 +254,18 @@ body {
     text-decoration: none;
     border-radius: 3.8rem;
     display: inline-block;    
+}
+
+.offer {
+    background-image: url(../images/offer.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+    padding-bottom: 100px;
+    &__text {
+        margin-top: 6rem;
+        max-width: 700px;
+
+    }
 }
