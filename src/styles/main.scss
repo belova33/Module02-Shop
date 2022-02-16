@@ -219,7 +219,6 @@ body {
         z-index: -1;
         } 
     }
-
     .title {
         font-family: $font-cormorant;
         font-weight: 700;
@@ -255,7 +254,6 @@ body {
         border-radius: 3.8rem;
         display: inline-block;    
     }
-
     .offer {
         background-image: url(../images/offer.png);
         background-size: cover;
@@ -354,8 +352,7 @@ body {
                     }
                 }
             }
-        }
-        
+        }        
         &-pagination {
             display: none;
            }
