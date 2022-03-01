@@ -484,14 +484,14 @@ body {
         background-size: 20px 11px;
         background-repeat: no-repeat; 
         opacity: .4;    
-           
+        cursor: pointer;
     }
     &__plus {
         pointer-events: none;       
         background-image: url(../images/catalog/plus-counter.svg);
         background-size: 20px 11px;
         background-repeat: no-repeat;  
-                    
+        cursor: pointer;            
     }
     &__input {
        text-align: center;       
@@ -764,7 +764,6 @@ body {
         transform: .3s; 
         &:hover {
             opacity: 1;
-            cursor: pointer;
             transform: scale(1.05);
         }
     }
