@@ -2,6 +2,7 @@
 
 $green: #27300f;
 $orange: #d26a22;
+$dark-orange: #cf5c0d;
 $white: #fff;
 
 $font-jost: 'Jost', sans-serif;
@@ -14,6 +15,11 @@ body {
     font-size: 1.6rem;
     font-family: $font-jost;
     color: $green;
+
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 .header {
     max-width: 1440px;
@@ -22,6 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 79px;
     
     &__nav {
         display: flex;
@@ -29,11 +36,16 @@ body {
         margin: 0;
         padding-left: 0;
         gap: 4.8rem;
-        margin-right: 12rem;
+        
+    }
+    &__navigation {
+        flex-grow: 1;
+        margin-left: 4rem;
     }
     &__link {
         text-decoration: none;
         color: $green;
+        transition: .3s;
         &:hover {
             color: $orange;
         }
@@ -42,13 +54,17 @@ body {
         text-decoration: none;           
         color: $green;
         font-weight: 500;
+        flex-basis: 200px;
+        letter-spacing: 1.3px;
+        transition: .3s;
+        text-align: right;
         &:hover {
             color: $orange;
         }
     }
     &__cart {
         display: block;
-        width: 4rem;
+        flex-basis: 4rem;
         height: 4rem;
         border-radius: 100%;
         background-color: $orange;
@@ -58,8 +74,11 @@ body {
         background-size: 1.7rem 1.5rem;
         position: relative;
         border: 1px solid $orange;
+        padding: 0;
+        transition: .3s;
+        cursor: pointer;
         &:hover {
-            background-color: #27300f;
+            background-color: $green;
             border: 1px solid $green;
         }
     }
@@ -67,7 +86,7 @@ body {
         color: $white;
         font-size: .8rem;
         position: absolute;
-        right: 1rem;
+        right: 0.7rem;
         top: .6rem;
     }
 }
@@ -76,8 +95,13 @@ body {
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 12.3rem;
-    height: 3.2rem;    
+    flex-basis: 12.3rem;
+    height: 3.2rem;
+    &_footer {
+        flex-basis: 18rem;
+        height: 4.8rem;
+        margin-top: 2rem;
+    }    
 }
 .container {
     max-width: 1440px;
@@ -86,11 +110,11 @@ body {
     padding-right: 15px;
 }
 .main {
-    background-image: url(../images/main.png);
+    /*background-image: url(../images/main.png);
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
-    position: relative;
+    position: relative;*/
     padding-bottom: 148px;
     z-index: 0;
     &__item {
@@ -129,9 +153,9 @@ body {
         align-items: center;               
     }
     &__image {
-        width: 92%;
-        box-shadow: 2rem 3rem 5.5rem rgba($green, 0.4);
+        width: 92%;        
         border-radius: 100%;
+        animation: shadow 5s infinite;
     }
     &__btn {
         background-color: transparent;
@@ -141,13 +165,16 @@ body {
         color: $green;
         text-align: left;
         &:hover {
-             .main__btn {
-                 &::before {
-                      background-color: $orange;
-                      border: 0 0 0 4px $orange, 0 0 0 5px $orange;
-                 }
-            }
-        }        
+            
+                &::before {
+                    background-color: $orange;
+                    box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+                    cursor: pointer;
+                    transition: .3s;
+                    cursor: pointer;   
+                }
+                                              
+        }       
         &::before {
             content: "";
             background-color: $green;
@@ -155,14 +182,15 @@ body {
             height: 11px;
             box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
             border-radius: 100%;
-            position: absolute;
-        }    
+            position: absolute; 
+        }
+
         &_1 {
-            top: 63px;
+            top: 46px;
             left: 63px;
             &::before {
-                bottom: 9px;
-                right: -23px;
+                bottom: 4px;
+                right: -35px;
             }
         }
         &_2 {
@@ -174,10 +202,10 @@ body {
             }
         }
         &_3 {
-            bottom: -40px;
-            right: 244px;
+            bottom: -43px;
+            right: 239px;
             &::before {
-                bottom: 48px;
+                bottom: 49px;
                 right: 35px;
             }
         }
@@ -217,7 +245,7 @@ body {
     &__beans {
         left: 0px;
         position: absolute;
-        bottom: 181px;
+        top: 803px;
         width: 10rem;
         z-index: -1;
         } 
@@ -259,6 +287,11 @@ body {
         border-radius: 3.8rem;
         display: inline-block; 
         border: none;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            background-color: $dark-orange;
+        }
         &_min {
             font-size: 1.4rem;
             padding: 2rem 3.4rem;
@@ -267,10 +300,10 @@ body {
     }
 
 .offer {
-    background-image: url(../images/offer.png);
+    /*background-image: url(../images/offer.png);
     background-size: cover;
     background-position-x: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     padding-top: 2rem;
     padding-bottom: 9rem;
     &__text {
@@ -450,13 +483,15 @@ body {
         background-image: url(../images/catalog/minus-counter.svg);
         background-size: 20px 11px;
         background-repeat: no-repeat; 
-        opacity: .4;       
+        opacity: .4;    
+           
     }
     &__plus {
         pointer-events: none;       
         background-image: url(../images/catalog/plus-counter.svg);
         background-size: 20px 11px;
-        background-repeat: no-repeat;              
+        background-repeat: no-repeat;  
+                    
     }
     &__input {
        text-align: center;       
@@ -522,7 +557,7 @@ body {
         }            
         &:nth-child(2) {
             &::before {
-                background-image: url(../images/traditional.svg);
+                background-image: url(../images/about_2.svg);
                 background-size: 40px 40px;
             }
         }
@@ -724,10 +759,13 @@ body {
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center center;
-        opacity: 0.4; 
+        opacity: 0.4;
+        transform: scale(1);
+        transform: .3s; 
         &:hover {
             opacity: 1;
             cursor: pointer;
+            transform: scale(1.05);
         }
     }
     &__mastercard {
@@ -746,7 +784,7 @@ body {
 
 .contact {
     padding-top: 88px;
-    padding-bottom: 100px;
+    padding-bottom: 161px;
     &-box {
         display: flex;
         align-items: center;
@@ -849,4 +887,124 @@ body {
         border-bottom: 1px solid #ecedec;
     }
 }
+
+footer {
+    border-top: 1px solid #d4d6cf;
+    padding-top: 6.5rem;
+    padding-bottom: 7rem;
+}
+
+.footer {
+    /*background-image: url(../images/footer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        color: $green;            
+    }
+    &__info {
+        display: flex;
+        flex-basis: 66.5%;
+        justify-content: space-between;
+        font-size: 1.8rem;
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 0px;
+        margin: 0;
+    }
+    &__item {            
+        font-size: 1.8rem;
+        line-height: 4.7rem;            
+    }
+    &__link {
+        text-decoration: none;
+        color: $green;            
+    }
+
+    &__contact {
+        margin-top: 1rem;                
+    }
+    &__tel {
+        font-size: 2.7rem;
+        color: $green;
+        display: block;
+        margin-bottom: 3.3rem;
+        text-decoration: none;
+    }
+    &__mail {
+        color: $green;
+        text-decoration: none;            
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        color: rgba($green, .6);
+        margin-top: 4rem;
+        margin-bottom: 85px;
+        p {
+            display: block;
+        }
+    }
+    &__author {
+        color: rgba($green, .6);
+        text-decoration: none;
+        transition: .3s;
+        &:hover {
+            color: rgba($green, 1);
+        }
+    }    
+}
+
+
+.footer-social {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    &__link {
+        display: block;
+        width: 4.6rem;
+        height: 4.6rem;
+        border: 2px solid $green;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        opacity: .8;
+        transition: .3s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__vk {
+        background-image: url(../images/vk.svg);
+        background-size: 2.3rem;
+    }
+    &__inst {
+        background-image: url(../images/instagram.svg);
+        background-size: 1.8rem;
+    }
+    &__fb {
+        background-image: url(../images/facebook.svg);
+        background-size: 1.8rem;
+    }
+}
+    @keyframes shadow {
+        0% {
+            box-shadow: 0 0 0 0 rgba($green, .5);
+        }
+        50% {
+            box-shadow: 2rem 2rem 3.3rem 0 rgba($green, .5);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba($green, .5);
+        }
+    }
 
