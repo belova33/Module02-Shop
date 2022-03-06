@@ -191,6 +191,16 @@ body {
         flex-basis: 18rem;
         height: 4.8rem;
         margin-top: 2rem;
+        @media (max-width: $r_desc) {
+            display: none;
+        }
+        @media (max-width: $r_tab) {
+            display: block;
+            flex-basis: auto;  
+            width: 13rem;          
+            height: 3.8rem;
+            margin: 0 auto 3rem;
+        }
     }    
 }
 .container {
@@ -633,6 +643,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 5%;
         } 
         &__description {
             font-size: 1.8rem;
@@ -701,6 +712,9 @@ body {
 
 .counter {
     display: flex;
+    @media (max-width: $r_tab) {
+        display: none;
+    }
     &__btn {        
         width: 5rem;
         height: 5rem;
@@ -738,6 +752,12 @@ body {
             width: 33px;
         }
     }
+    & + .link {
+        flex-grow: 1;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 .link{
     &-min {
@@ -754,6 +774,13 @@ body {
         justify-content: space-between;
         align-items: center;
         margin-top: 7rem;
+        gap: 10rem;
+        @media (max-width: $r_desc) {
+            gap: 7rem;
+        }
+        @media (max-width: $r_tab) {
+            flex-direction: column;            
+        }
     }
     &__text {
         margin-left: 12rem;
@@ -768,6 +795,10 @@ body {
             max-width: 100%;
             margin-left: 0;
             margin-top: 3rem;
+            flex-basis: 0.5rem;
+        }
+        @media (max-width: $r_desc) {
+            margin-left: 0;
         }
     }
     &__list {        
@@ -779,6 +810,14 @@ body {
         font-size: 3rem;
         margin: 0;
         padding-left: 0;
+        @media (max-width: $r_desc_1280) {
+            font-size: 2.5rem;
+            gap: 6rem;
+        }
+        @media (max-width: $r_desc) {
+            font-size: 2.2rem;
+            gap: 4rem;
+        }
     }
     &__item {
         display: flex;
@@ -830,27 +869,7 @@ body {
     }
     &__image {
         max-height: 185px;
-    }
-    /*&__btn {
-        text-transform: uppercase;
-        font-weight: 500;
-        color: #27300f;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        letter-spacing: 0.1rem;
-        opacity: 0.8;               
-        :before {
-            content: "";
-            display: block;
-            width: 3rem;
-            height: 3rem;
-            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMCAzMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAgMzA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMjczMDBGO30KCS5zdDF7ZmlsbDojMjczMDBGO30KPC9zdHlsZT4KPGNpcmNsZSBpZD0i0K3Qu9C70LjQv9GBXzhf0LrQvtC/0LjRj18zIiBjbGFzcz0ic3QwIiBjeD0iMTUuMSIgY3k9IjE1IiByPSIxNC4zIi8+CjxnPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTIyLjQsMTQuM2gtNi43VjcuNmMwLTAuMy0wLjMtMC42LTAuNi0wLjZjLTAuMywwLTAuNiwwLjMtMC42LDAuNnY2LjdINy43Yy0wLjMsMC0wLjYsMC4zLTAuNiwwLjYKCQkJczAuMywwLjYsMC42LDAuNmg2Ljd2Ni43YzAsMC4zLDAuMywwLjYsMC42LDAuNnMwLjYtMC4zLDAuNi0wLjZ2LTYuN2g2LjdjMC4zLDAsMC42LTAuMywwLjYtMC42QzIzLDE0LjYsMjIuNywxNC4zLDIyLjQsMTQuM3oiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K);
-            background-size: cover;
-            background-repeat: no-repeat;            
-        }
-    }*/
+    }    
 }
 
 .category {
@@ -859,9 +878,19 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
+    @media (max-width: $r_desc_1120) {
+        flex-wrap: wrap;
+    }
+    @media (max-width: $r_tab) {
+        justify-content: center;
+        gap: 1rem;
+    }    
     &__item {
         flex-basis: 230px;
         text-align: center;
+        @media (max-width: $r_tab) {
+            flex-basis: 170px;        
+        }
     }
     &__link {
         padding: 2.4rem 0;
@@ -871,6 +900,10 @@ body {
         text-decoration: none;
         border-radius: 4rem;
         display: block;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+            padding: 1.8rem 0;
+        }
         &:hover {
             border: 1px solid $orange;
             color: $orange;
@@ -882,6 +915,12 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    @media (max-width: $r_desc_1280) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: $r_desc) {
+        grid-template-columns: repeat(2, 1fr);
+    }
     &__item {
         border: 1px solid rgba($green, 0.4);
         border-radius: 2rem;
@@ -965,6 +1004,22 @@ body {
         margin-top: 7.6rem;
         margin-left: 12rem;
         gap: 12%;
+        @media (max-width: $r_desc_1280) {
+            margin-left: 8rem;
+        }
+        @media (max-width: $r_desc_1120) {
+            margin-left: 4rem;
+        }
+        @media (max-width: $r_desc) {
+            margin-left: 0rem;
+        }
+        @media (max-width: $r_tab) {
+            margin-left: 4rem;
+            flex-direction: column;
+            text-align: center;
+            max-width: 500px;
+            margin: 5rem auto 0;
+        }
     }
     &__text {
         flex-basis: 44%;        
@@ -1000,6 +1055,9 @@ body {
         display: flex;
         gap: 3rem;
         margin-top: 4.3rem;
+        @media (max-width: $r_tab) {
+            justify-content: center;
+        }
     }
     &__item {
         height: 32px;
@@ -1030,31 +1088,59 @@ body {
 
 .contact {
     padding-top: 88px;
-    padding-bottom: 161px;
+    padding-bottom: 161px;      
     &-box {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: $r_desc) {
+            gap: 10%;
+        }
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+        }
         &__text {
             max-width: 400px;
             flex-grow: 1;
             margin-top: 6rem;
             margin-left: 12rem;
+            @media (max-width: $r_desc_1280) {
+                margin-left: 8rem;
+            }
+            @media (max-width: $r_desc_1120) {
+                margin-left: 4rem;
+            }
+            @media (max-width: $r_tab) {
+                text-align: center;
+            }
+            @media (max-width: $r_desc) {
+                margin-left: 0;
+            }
         }
         &__form {
             flex-basis: 589px;
+            @media (max-width: $r_desc) {
+                flex-basis: auto;
+                flex-grow: 1;
+            }
         }
         
         &__description {
-            margin-bottom: 2.6rem;
+            margin-bottom: 2.6rem;            
         }
         &__list {
             list-style-type: none;
             padding-left: 0px;
             margin-top: 6rem;
+            margin-bottom: 0;
+            font-size: 2.4rem;
+            @media (max-width: $r_tab) {
+                font-size: 1.6rem;
+                display: flex;
+                justify-content: space-between;
+            }
         }
         &__link {
-            font-size: 2.4rem;
             color: #27300f;
             text-decoration: none;
             font-weight: 500;
@@ -1062,6 +1148,9 @@ body {
             align-items: center;
             gap: 3rem;
             margin-bottom: 1.8rem;
+            @media (max-width: $r_tab) {
+                gap: 1rem;
+            }
             &::before {
                 content: "";
                 background-repeat: no-repeat;
@@ -1089,6 +1178,9 @@ body {
     border: 2px solid rgba($green, 0.4);
     padding: 3.2rem 5.8rem 4rem;
     border-radius: 2rem;
+    @media (max-width: $r_desc) {
+        padding: 3.2rem 3rem 4rem;
+    }
     &__title {
        font-size: 3rem; 
        font-family: $font-cormorant;
@@ -1144,18 +1236,42 @@ footer {
     &__box {
         display: flex;
         justify-content: space-between;
-        color: $green;            
+        color: $green; 
+        font-size: 1.8rem;
+        @media (max-width: $r_desc) {
+            gap: 9%;
+        }  
+        @media (max-width: $r_tab) {
+            flex-direction: column;            
+        }         
     }
     &__info {
         display: flex;
         flex-basis: 66.5%;
-        justify-content: space-between;
-        font-size: 1.8rem;
-    }
+        justify-content: space-between;        
+        @media (max-width: $r_desc) {
+            flex-basis: auto;
+            flex-grow: 1;
+        }
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }   
     &__list {
         list-style-type: none;
         padding-left: 0px;
         margin: 0;
+        @media (max-width: $r_tab) {
+            margin-bottom: 3rem;            
+        }
+        &:first-child {
+            @media (max-width: $r_tab) {
+                display: flex;
+                justify-content: center;
+                gap: 3rem;
+            }
+        }
     }
     &__item {            
         font-size: 1.8rem;
@@ -1163,10 +1279,14 @@ footer {
     }
     &__link {
         text-decoration: none;
-        color: $green;            
+        color: $green;    
+        transition: .3s;
+        &:hover {
+            color: $orange;
+        }     
     }
     &__contact {
-        margin-top: 1rem;                
+        margin-top: 1rem;
     }
     &__tel {
         font-size: 2.7rem;
@@ -1174,17 +1294,33 @@ footer {
         display: block;
         margin-bottom: 3.3rem;
         text-decoration: none;
+        transition: .3s;
+        @media (max-width: $r_tab) {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        &:hover {
+            color: $orange;
+        }   
     }
     &__mail {
         color: $green;
-        text-decoration: none;            
+        text-decoration: none;  
+        transition: .3s;
+        &:hover {
+            color: $orange;
+        }                
     }
     &__text {
         display: flex;
         justify-content: space-between;
         font-size: 1.6rem;
         color: rgba($green, .6);
-        margin-top: 4rem;        
+        margin-top: 4rem; 
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+            text-align: center;
+        }            
         p {
             display: block;
         }
@@ -1206,6 +1342,10 @@ footer {
     padding-left: 0;
     margin-top: 3rem;
     margin-bottom: 0;
+        @media (max-width: 768px) {
+        max-width: 230px;
+        margin: 3rem auto 0;
+    }
     &__link {
         display: block;
         width: 4.6rem;
