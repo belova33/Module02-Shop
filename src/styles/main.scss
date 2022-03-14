@@ -517,6 +517,9 @@ body {
 .offer {
     padding-top: 2rem;
     padding-bottom: 9rem;
+    @media (max-width: $r_tab) {
+        padding-bottom: 4rem;
+    }
     &__text {
         margin-top: 6rem;
          max-width: 700px;
@@ -856,16 +859,25 @@ body {
 }
 
 .trends {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
     &__text {
         margin-top: 4rem;
     }
 }
 
 .catalog {
-    margin-top: 19rem;
+    margin-top: 11rem;
+    padding-bottom: 14rem;
+    @media (max-width: $r_tab) {
+        padding-bottom: 4rem;
+    }
     &__list {
         margin-top: 8.5rem;
         margin-bottom: 5rem;
+        @media (max-width: $r_tab) {
+            margin-top: 5rem;
+        }
     }
     &__image {
         max-height: 185px;
@@ -878,7 +890,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    @media (max-width: $r_desc_1120) {
+    @media (max-width: $r_desc_hd) {
         flex-wrap: wrap;
     }
     @media (max-width: $r_tab) {
@@ -916,16 +928,23 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     @media (max-width: $r_desc_1280) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     @media (max-width: $r_desc) {
         grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $r_tab) {
+        gap: 1rem;
     }
     &__item {
         border: 1px solid rgba($green, 0.4);
         border-radius: 2rem;
         padding: 2.7rem 3rem 3.8rem;
         box-sizing: border-box;
+        transition: .3s;
+        @media (max-width: $r_tab) {            
+            padding: 2.2rem 2rem 2.8rem;
+        }
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
         }
@@ -934,7 +953,11 @@ body {
         position: relative;
         overflow: hidden;
         width: 100%;
-        object-fit: contain;
+        height: 204px;
+        text-align: center;
+        @media (max-width: $r_tab) {
+            height: 150px;
+        }
     }
     &__title {
         font-family: $font-cormorant;
@@ -942,6 +965,9 @@ body {
         color: $green;
         margin-top: 1.7rem;
         margin-bottom: 0;
+        @media (max-width: $r_tab) {
+            font-size: 2rem;
+        }
     }
     &__description {
         font-size: 1.6rem;
@@ -951,20 +977,27 @@ body {
         min-height: 61px;
         max-width: 300px;
         line-height: 1.5;
+        @media (max-width: $r_tab) {
+            font-size: 1.3rem;
+        }
     }
     &__price {
         font-size: 2.4rem;
         margin-top: 0;
         margin-bottom: 3rem;
+        @media (max-width: $r_tab) {
+            font-size: 2rem;
+        }
     }
     &__footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 5%;
     }
     &__image {            
         width: 100%;
-        max-height: 200px;        
+        max-width: 351px;        
         object-fit: contain;
     }
 }
@@ -1087,8 +1120,12 @@ body {
 }
 
 .contact {
-    padding-top: 88px;
-    padding-bottom: 161px;      
+    padding-top: 10rem;
+    padding-bottom: 16rem;
+    @media (max-width: $r_tab) {
+        padding-top: 4rem;
+        padding-bottom: 8rem;
+    }      
     &-box {
         display: flex;
         align-items: center;
