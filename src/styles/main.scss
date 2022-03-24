@@ -245,6 +245,9 @@ body {
     position: relative;
     padding-bottom: 187px;
     z-index: 0;
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 4rem;
+    }
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -259,16 +262,13 @@ body {
             max-width: 100%;
             margin-left: 0;
             margin-top: 3rem;
-        }
+        }        
     }
     &__link {
         margin-top: 5.3rem;
         @media (max-width: $r_tab) {
             text-align: center;
-        }
-        @media (max-width: $r_mob_500) {
-            margin-top: 3.3rem;
-        }
+        }              
     }
     &__flex {
         display: flex;
@@ -447,9 +447,9 @@ body {
         }
         @media (max-width: $r_mob_500) {
             bottom: inherit;
-            top: 8.2rem;
+            top: 10.2rem;
             right: inherit;
-            left: -14px;
+            left: -10px;
         }    
     }
           
@@ -465,8 +465,8 @@ body {
             right: -50px;
         }
         @media (max-width: $r_mob_500) {
-            top: 88px;
-            width: 9.8rem;
+            top: 80px;
+            width: 9rem;
             right: -30px;
         }
     }
@@ -481,7 +481,7 @@ body {
         }
         @media (max-width: $r_mob_500) {
             display: block;
-            top: 352px;
+            top: 31rem;
             left: -4px;
             width: 4.6rem;
         }
@@ -498,7 +498,7 @@ body {
             top: inherit;
             left: inherit;
             right: -15px;
-            bottom: 21.6rem;
+            bottom: 17.6rem;
         }  
     } 
     &__beans {        
@@ -532,6 +532,11 @@ body {
         @media (max-width: $r_tab) {
             text-align: center;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 3.8rem;
+            margin-top: -3rem;
+            font-weight: 900;
+        }
         &__span {
             font-style: italic;
         }
@@ -543,20 +548,31 @@ body {
     }
     .description {
         margin: 0;
-        line-height: 1.5;
+        line-height: 1.5;        
         @media (max-width: $r_tab) {
             text-align: center;
+        }
+        @media (max-width: $r_mob_500) {
+            width: 240px;
+            margin: 0;
         }
         &_size-s {
             font-size: 1.8rem;
             @media (max-width: $r_desc_1280) {
-                font-size: 1.4rem;
+                font-size: 1.5rem;
+            }
+            @media (max-width: $r_mob_500) {                
+                margin-top: -1rem;                               
             }
         }
         &_size-m {
             font-size: 2.4rem;
             @media (max-width: $r_desc_1280) {
                 font-size: 2.2rem;
+            }
+            @media (max-width: $r_mob_500) {                
+                font-size: 1.5rem;
+                margin-top: -2rem;                                            
             }
         }
     }
@@ -576,6 +592,10 @@ body {
         @media (max-width: $r_desc_1280) {
             font-size: 1.4rem;
         }
+        @media (max-width: $r_mob_500) {
+            margin-top: -2rem;
+            padding: 2rem 3rem;
+        }  
         &:hover {
             background-color: $dark-orange;
         }
@@ -593,10 +613,13 @@ body {
     @media (max-width: $r_tab) {
         padding-bottom: 4rem;
     }
+    @media (max-width: $r_mob_500) {
+        padding-top: 3rem;
+    }  
     &__text {
         margin-top: 6rem;
          max-width: 700px;
-    }    
+    }        
 }
 
 .slider {
