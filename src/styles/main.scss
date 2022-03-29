@@ -668,13 +668,13 @@ body {
                 height: 240px;
                 text-align: center;
                 padding: 2.2rem 1.7rem;
-            }
+            }            
             &:hover {
                 .swiper-slide__hover {
                     height: 233px;
                     opacity: 1;
                     @media (max-width: $r_mob_500) {
-                        height: auto;
+                        height: auto;                        
                     }
                 }
                 &::after {
@@ -686,7 +686,10 @@ body {
                     top: 2px;
                     left: 2px;
                     border-radius: 2rem;
-                    z-index: -1;                           
+                    z-index: -1; 
+                    @media (max-width: $r_mob_500) {
+                        display: none;                        
+                    }                          
                 }
             }
         }
@@ -695,6 +698,10 @@ body {
         }                                    
         &_milk {
             background-image: url(../images/milk.png);
+            @media (max-width: $r_mob_500) {
+                background-image: url(../images/bottle-of-milk-mob.jpg);
+                                      
+            }  
         }
         &_pasta {
             background-image: url(../images/pasta.png);
@@ -1221,6 +1228,10 @@ body {
     margin: 0 auto;
     margin-top: 6rem;
     cursor: pointer;
+    @media (max-width: $r_mob_500) {
+        font-size: 1.2rem;
+        margin-top: 5rem;
+    }
     &::before {
         content: "";
         display: block;
@@ -1235,6 +1246,10 @@ body {
 .deliveri {
     padding-top: 100px;
     padding-bottom: 100px;
+    @media (max-width: $r_mob_500) {
+        padding-top: 26px;
+        padding-bottom: 0;
+    }
     &__box {
         line-height: 1.5;
         display: flex;
@@ -1262,10 +1277,18 @@ body {
         flex-basis: 44%;        
     }
     &__description {
-        padding-bottom: 2.6rem; 
+        padding-bottom: 2.6rem;         
+        @media (max-width: $r_mob_500) {
+            padding-bottom: 3.5rem;                                                        
+        }        
     }
+    
     &__pay {
         flex-basis: 37%;
+        @media (max-width: $r_mob_500) {
+            padding-top: 3.5rem;  
+            max-width: 330px;                      
+        }
     }
     &__link {
         color: #27300f;
@@ -1312,14 +1335,23 @@ body {
     &__mastercard {
         width: 53px;
         background-image: url(../images/mastercard.svg);
+        @media (max-width: $r_mob_500) {
+            width: 36px;                      
+        }
     }
     &__visa {
         width: 74px;
         background-image: url(../images/visa.svg);
+        @media (max-width: $r_mob_500) {
+            width: 55px;                      
+        }
     }
     &__paypal {
         width: 87px;
         background-image: url(../images/paypal.svg);
+        @media (max-width: $r_mob_500) {
+            width: 67px;                      
+        }
     }
 }
 
