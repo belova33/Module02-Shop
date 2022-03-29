@@ -266,7 +266,7 @@ body {
         }        
     }
     &__link {
-        margin-top: 5.3rem;
+        margin-top: 4.3rem;
         @media (max-width: $r_tab) {
             text-align: center;
         }              
@@ -280,6 +280,9 @@ body {
         padding-top: 3rem;
         padding-bottom: 3rem;
         }
+        @media (max-width: $r_tab) {
+            padding-top: 0;
+        }        
     }
     &__cover {
         flex-basis: 758px;
@@ -554,7 +557,7 @@ body {
             text-align: center;
         }
         @media (max-width: $r_mob_500) {
-            width: 240px;
+            width: 242px;
             margin: 0 auto;
         }
         &_size-s {
@@ -593,8 +596,7 @@ body {
         @media (max-width: $r_desc_1280) {
             font-size: 1.4rem;
         }
-        @media (max-width: $r_mob_500) {
-            
+        @media (max-width: $r_mob_500) {            
             padding: 2rem 3rem;
         }  
         &:hover {
@@ -615,11 +617,14 @@ body {
         padding-bottom: 4rem;
     }
     @media (max-width: $r_mob_500) {
-        padding-top: 3rem;
+        padding-top: 0;
     }  
     &__text {
         margin-top: 6rem;
-         max-width: 700px;
+        max-width: 700px;
+        @media (max-width: $r_mob_500) {
+            margin-top: 5rem;
+        }  
     }        
 }
 
@@ -805,7 +810,7 @@ body {
     &-pagination-bullets {
         @media (max-width: $r_tab) {
             display: block;
-        }
+        }        
     }
 
     &-button-next, &-button-prev {                
@@ -836,6 +841,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: $r_mob_500) {
+        bottom: -39px;
+    }
 }
 .swiper-pagination-bullet {
     background: $dark-orange;
@@ -844,6 +852,10 @@ body {
 .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
+    @media (max-width: $r_mob_500) {
+        width: 6px;
+        height: 6px;
+    }
 }
 
 .counter {
@@ -904,6 +916,10 @@ body {
 .about {
     padding-top: 37px;
     padding-bottom: 151px;
+    @media (max-width: $r_mob_500) {
+        padding-top: 6px;
+        padding-bottom: 20px;            
+    }
     &__box {
         display: flex;
         justify-content: space-between;
@@ -915,7 +931,7 @@ body {
         }
         @media (max-width: $r_tab) {
             flex-direction: column;            
-        }
+        }        
     }
     &__text {
         margin-left: 12rem;
@@ -935,6 +951,9 @@ body {
         @media (max-width: $r_desc) {
             margin-left: 0;
         }
+        @media (max-width: $r_mob_500) {
+            margin-top: -3rem;
+        }
     }
     &__list {        
         list-style: none;
@@ -953,6 +972,11 @@ body {
             font-size: 2.2rem;
             gap: 4rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.8rem;
+            margin-top: -1.7rem;
+            gap: 4.8rem;
+        }
     }
     &__item {
         display: flex;
@@ -968,23 +992,30 @@ body {
             border: 1px solid rgba($green, 0.4);
             border-radius: 100%;
             margin-bottom: 1.5rem;
+            @media (max-width: $r_mob_500) {
+                width: 60px;
+                height: 60px;
+            }
         }        
         &:nth-child(1) {
             &::before {
                 background-image: url(../images/about_1.svg);
                 background-size: 44px 41px;
+                @media (max-width: $r_mob_500) {
+                    background-size: 29px 26px;
+                }
             }
         }            
         &:nth-child(2) {
             &::before {
                 background-image: url(../images/about_2.svg);
-                background-size: 40px 40px;
+                background-size: 30px 30px;
             }
         }
         &:nth-child(3) {
             &::before {
                 background-image: url(../images/about_3.svg);
-                background-size: 45px 39px;
+                background-size: 30px 24px;
             }
         }
     }        
@@ -995,8 +1026,13 @@ body {
     padding-bottom: 8rem;
     &__text {
         margin-top: 4rem;
+        @media (max-width: $r_mob_500) {
+            padding-top: .4rem;
+        }
     }
 }
+
+
 
 .catalog {
     margin-top: 11rem;
