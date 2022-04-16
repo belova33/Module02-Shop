@@ -674,9 +674,11 @@ body {
                 height: 400px;
             }
             @media (max-width: $r_mob_500) {
-                height: 240px;
+                background-position: center 15px;
                 text-align: center;
                 padding: 2.2rem 1.7rem;
+                    background-size: 16rem;
+                    height: 30rem;
             }            
             &:hover {
                 .swiper-slide__hover {
